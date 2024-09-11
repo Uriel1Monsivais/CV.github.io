@@ -1,0 +1,323 @@
+/* Fondo azul que cubre toda la pantalla */
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #077ff7;
+    z-index: -1; /* El fondo estará detrás de todo el contenido */
+}
+
+/* Carta que contendrá todo el contenido */
+.carta-contenido {
+    max-width: 1200px; /* Ancho máximo de la carta */
+    margin: 0 auto; /* Centra la carta horizontalmente */
+    background-color: white; /* Fondo blanco para la carta */
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el efecto de tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    z-index: 1; /* Asegura que la carta esté por encima del fondo */
+    position: relative; /* Para permitir el desplazamiento de la carta */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+/* Centrar la sección de formación académica */
+.educacion-contenido {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.flip-container {
+    display: inline-block; /* Asegura que las imágenes estén alineadas en el centro */
+}
+
+.texto-educacion h2, .texto-educacion p {
+    margin: 0.5rem 0;
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+p, ol {
+    font-size: 1.6rem; /* Ajusta este valor según el tamaño que prefieras */
+    line-height: 1.6;  /* Ajusta el espaciado entre líneas si es necesario */
+}
+
+h1, h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2.6rem; /* Tamaño ajustado */
+}
+
+/* Header */
+header {
+    background-color: #077ff7;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Para el contenido del header */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Información personal (nombre y título) */
+.info-personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 100%; /* Ocupará el 100% del espacio para ajustarse a la imagen */
+}
+
+.info-personal h1 {
+    font-size: 6rem; /* Tamaño del h1 aumentado significativamente */
+    margin: 0;
+    line-height: 1.2; /* Espaciado entre líneas */
+    font-weight: bold; /* Asegura que sea negrita */
+    text-align: left; /* Alineado a la izquierda */
+}
+
+.info-personal p {
+    margin: 0;
+    font-size: 1.5rem; /* Tamaño de la descripción debajo del nombre */
+    text-align: left; /* Alineado a la izquierda */
+}
+
+/* Imagen personal */
+.imagen-personal {
+    flex-basis: 30%; /* Ocupará el 30% del espacio */
+    display: flex;
+    justify-content: flex-end; /* Alinea la imagen a la derecha */
+}
+
+.imagen-personal img {
+    border-radius: 10px;
+    max-width: 100%; /* Asegura que la imagen no sobrepase el contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border: 5px solid black; /* Añade un borde negro de 5px */
+}
+
+/* Menú de Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem; /* Espacio entre los enlaces del menú */
+}
+
+nav ul li {
+    display: flex-end;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sección */
+section {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #0073e6;
+    color: white;
+    margin-top: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo de las tarjetas en cuadrícula */
+#otros-conocimientos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 2rem 0;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* La tarjeta tomará el espacio disponible */
+    border: 1px solid rgb(214, 218, 221);
+    box-shadow: 2px 2px 8px 4px #4e4c4cd1;
+    border-radius: 15px;
+    font-family: sans-serif;
+    background-color: white;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Efecto hover para dar un poco de interacción a las tarjetas */
+.tarjeta:hover {
+    transform: scale(1.05); /* Efecto de ampliación al pasar el cursor */
+}
+
+/* Botón de descarga */
+.boton-descargar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #077ff7;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.boton-descargar:hover {
+    background-color: #005bb5;
+}
+
+/* Contenedor de la sección "Sobre mí" */
+.sobre-mi-contenido {
+    display: block; /* Cambiar a block para que ocupe todo el ancho */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina relleno */
+}
+
+.texto-sobre-mi {
+    width: 100%; /* Asegura que el texto también ocupe todo el ancho */
+    text-align: justify; /* Justifica el texto para que cubra completamente el espacio */
+}
+
+.imagen-sobre-mi img {
+    border-radius: 10px; /* Borde redondeado opcional */
+    border: 2px solid black; /* Borde negro alrededor de la imagen */
+}
+
+/* Contenedor del efecto 3D */
+.flip-container {
+    perspective: 1000px;
+}
+
+.flipper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    transform-style: preserve-3d;
+    animation: rotar3D 5s infinite linear;
+}
+
+.front, .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* La parte frontal */
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+/* La parte trasera */
+.back {
+    transform: rotateY(180deg);
+}
+
+/* Animación de rotación */
+@keyframes rotar3D {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Ajusta el header en pantallas pequeñas */
+        align-items: center; /* Centra el contenido en pantallas pequeñas */
+    }
+
+    .imagen-personal {
+        margin-top: 1rem;
+        order: 1; /* Mueve la imagen debajo del texto */
+    }
+
+    .info-personal h1 {
+        font-size: 4rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+
+    .info-personal p {
+        font-size: 1.2rem; /* Ajusta el tamaño del subtítulo */
+    }
+
+    /* Ajustar las tarjetas para que solo aparezcan 1 por fila */
+    #otros-conocimientos {
+        grid-template-columns: 1fr; /* 1 tarjeta por fila en pantallas pequeñas */
+    }
+
+    .carta-contenido {
+        padding: 1rem; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    section {
+        margin: 0.5rem 0; /* Reduce el margen entre secciones */
+    }
+
+    p, ol {
+        font-size: 1.4rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    }
+
+    h1, h2 {
+        font-size: 2rem; /* Ajusta el tamaño de los encabezados en pantallas pequeñas */
+    }
+
+    .imagen-sobre-mi {
+        margin-top: 1rem;
+        text-align: center; /* Centra la imagen en pantallas pequeñas */
+    }
+}
